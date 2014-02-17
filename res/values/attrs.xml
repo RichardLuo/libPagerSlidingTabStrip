@@ -5,8 +5,11 @@
         <attr name="pstsIndicatorColor" format="color" />
         <attr name="pstsUnderlineColor" format="color" />
         <attr name="pstsDividerColor" format="color" />
+        <attr name="pstsDrawDivider" format="boolean" />
         <attr name="pstsIndicatorHeight" format="dimension" />
         <attr name="pstsUnderlineHeight" format="dimension" />
+        <attr name="pstsUnderlineLeftRightMargin" format="dimension" />
+        <attr name="pstsIndicatorCircleRadius" format="dimension" />
         <attr name="pstsDividerPadding" format="dimension" />
         <attr name="pstsTabPaddingLeftRight" format="dimension" />
         <attr name="pstsScrollOffset" format="dimension" />
