@@ -39,10 +39,9 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import java.util.Locale;
-import android.util.Log;
-
 import com.astuetz.pagerslidingtabstrip.R;
+
+import java.util.Locale;
 
 public class PagerSlidingTabStrip extends HorizontalScrollView {
 
@@ -213,12 +212,12 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 			if (pager.getAdapter() instanceof IconTabProvider) {
 				addIconTab(i, ((IconTabProvider) pager.getAdapter()).getPageIconResId(i));
 			} else {
-				addTextTab(i, pager.getAdapter().getPageTitle(i).toString());
+				addTextTab(i, pager.getAdapter().getPageTitle(i));
 			}
 
 		}
 
-		updateTabStyles();
+//		updateTabStyles();
 
 		getViewTreeObserver().addOnGlobalLayoutListener(new OnGlobalLayoutListener() {
 
@@ -241,7 +240,7 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 
 	}
 
-	private void addTextTab(final int position, String title) {
+	private void addTextTab(final int position, CharSequence title) {
 
 		TextView tab = new TextView(getContext());
 		tab.setText(title);
