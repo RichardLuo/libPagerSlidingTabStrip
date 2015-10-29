@@ -326,11 +326,11 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 
     private void changeTabsTextColor(int new_posi) {
 		for(int i = 0; i < tabCount; ++i) {
-			if(i == new_posi)
+			if (i == new_posi)
 				setTabTextColor(i, indicatorColor);
-    private void changeTabsTextColor(int old_posi, int new_posi) {
-        setTabTextColor(old_posi, tabTextColor);
-        setTabTextColor(new_posi, indicatorColor);        
+			else
+				setTabTextColor(i, tabTextColor);
+		}
     }
 
 	@Override
