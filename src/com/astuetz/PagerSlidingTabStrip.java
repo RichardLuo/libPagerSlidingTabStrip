@@ -324,6 +324,10 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
         view.setTextColor(color);
     }
 
+    private void changeTabsTextColor(int new_posi) {
+		for(int i = 0; i < tabCount; ++i) {
+			if(i == new_posi)
+				setTabTextColor(i, indicatorColor);
     private void changeTabsTextColor(int old_posi, int new_posi) {
         setTabTextColor(old_posi, tabTextColor);
         setTabTextColor(new_posi, indicatorColor);        
@@ -420,10 +424,8 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
                     break;
                 case ViewPager.SCROLL_STATE_SETTLING:
                     int positionOnSettling = pager.getCurrentItem();
-                    if (positionOnSettling != positionOnDraging) {
-                        changeTabsTextColor(positionOnDraging, positionOnSettling);
-                        invalidate();
-                    }
+                    changeTabsTextColor(positionOnSettling);
+                    invalidate();
                     break;
                 default:
                     break;
